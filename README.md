@@ -190,7 +190,7 @@ MainApp.java
 
 Jairo Gonzaga de Souza
 Disciplina: Linguagem de Programação III
-Professor: Gustavo Maruyama
+Professor: Renato 
 Instituição: IFMS — Campus Coxim
 
 📜 Licença

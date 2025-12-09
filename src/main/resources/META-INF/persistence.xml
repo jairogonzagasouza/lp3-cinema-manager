@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+        http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="cinemaPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>br.edu.ifms.cinema.model.Filme</class>
+    <class>br.edu.ifms.cinema.model.Sala</class>
+    <class>br.edu.ifms.cinema.model.Sessao</class>
+    <class>br.edu.ifms.cinema.model.Cliente</class>
+    <class>br.edu.ifms.cinema.model.Ingresso</class>
+    <class>br.edu.ifms.cinema.model.Assento</class>
+    <class>br.edu.ifms.cinema.model.CartaoFidelidade</class>
+
+    <properties>
+      <!-- Configure your local MySQL connection -->
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cinema_db?createDatabaseIfNotExist=true"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.password" value="root"/>
+
+      <!-- EclipseLink properties -->
+      <property name="eclipselink.logging.level" value="FINE"/>
+      <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+      <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+    </properties>
+  </persistence-unit>
+</persistence>
